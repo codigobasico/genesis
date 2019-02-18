@@ -1,12 +1,13 @@
 <?php
 
 namespace Modules\Base\Http\Controllers\Modals;
-use Modules\Base\Http\Controllers\ControllerBase as Controller;
-use Modules\Base\Http\Requests\Setting\Category as Request;
-use Illuminate\Http\Request as CRequest;
-use App\Models\Setting\Category;
 
-class Categories extends Controller
+use Modules\Base\Http\Controllers\ControllerBase as Controller;
+use Modules\Base\Http\Requests\Ums as Request;
+use Illuminate\Http\Request as CRequest;
+use Modules\Base\Models\Ums;
+
+class Unidades extends Controller
 {
     /**
      * Instantiate a new controller instance.
@@ -14,11 +15,13 @@ class Categories extends Controller
     public function __construct()
     {
         // Add CRUD permission check
-        $this->middleware('permission:create-settings-categories')->only(['create', 'store', 'duplicate', 'import']);
+       /* $this->middleware('permission:create-settings-categories')->only(['create', 'store', 'duplicate', 'import']);
         $this->middleware('permission:read-settings-categories')->only(['index', 'show', 'edit', 'export']);
         $this->middleware('permission:update-settings-categories')->only(['update', 'enable', 'disable']);
         $this->middleware('permission:delete-settings-categories')->only('destroy');
-    }
+    */
+        }
+        
 
     /**
      * Show the form for creating a new resource.
@@ -28,18 +31,10 @@ class Categories extends Controller
     public function create(CRequest $request)
     {
        
-        //dd('create');
+        //dd("holis");
         $type = $request['type'];
-
-        $category_selector = false;
-
-        if (request()->has('category_selector')) {
-            $category_selector = request()->get('category_selector');
-        }
-
-        $rand = rand();
-
-        $html = view('base::modals.categories.create', compact('type', 'category_selector', 'rand'))->render();
+        
+        $html = view('base::modals.unidades.create', compact( 'type'))->render();
 
         return response()->json([
             'success' => true,
@@ -58,9 +53,9 @@ class Categories extends Controller
      */
     public function store(Request $request)
     {
-        $request['enabled'] = 1;
+        
 
-        $category = Category::create($request->all());
+        $category = Ums::create($request->all());
 
         $message = trans('messages.success.added', ['type' => trans_choice('general.categories', 1)]);
 

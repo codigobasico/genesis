@@ -7,6 +7,9 @@ use App\Http\Requests\Setting\Category as Request;
 use Illuminate\Http\Request as CRequest;
 use App\Models\Setting\Category;
 
+
+
+
 class Categories extends Controller
 {
     /**
@@ -28,6 +31,8 @@ class Categories extends Controller
      */
     public function create(CRequest $request)
     {
+        dd('holis');
+        
         $type = $request['type'];
 
         $category_selector = false;
@@ -38,7 +43,7 @@ class Categories extends Controller
 
         $rand = rand();
 
-        $html = view('modals.categories.create', compact('currencies', 'type', 'category_selector', 'rand'))->render();
+        $html = view('modals.categories.create', compact( 'type', 'category_selector', 'rand'))->render();
 
         return response()->json([
             'success' => true,

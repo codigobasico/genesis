@@ -88,7 +88,7 @@ class Unidades extends ControllerBase
     
         $ums=Ums::find($id);
         
-        return view('common.unidades.edit', compact('ums'));
+        return view('base::unidades.edit', compact('ums'));
    
     }
 
@@ -104,9 +104,7 @@ class Unidades extends ControllerBase
         $um=Ums::find($id);
        // $this->validate($request, ['year' => new OlympicYear]);
         //$this->validate($request, ['codum' => new RuleUm($um)]);        
-        $request->validate([
-    'codum' => ['required', 'string', new RuleUm],
-                ]);
+       
        /* $this->validateWithRule($request,
                 'codum',
                 new RuleUm($um));*/

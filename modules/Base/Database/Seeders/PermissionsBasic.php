@@ -28,7 +28,8 @@ class PermissionsBasic extends Seeder
     private function controllers()
     {
         return [
-              'base-unidades'
+              'base-unidades',
+              'base-items'
              ];
     } 
     

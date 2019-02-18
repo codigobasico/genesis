@@ -1,7 +1,7 @@
 <?php
 
 namespace Modules\Base\Database\Seeders;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 

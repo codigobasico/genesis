@@ -3,7 +3,7 @@ namespace Modules\Base\Http\Controllers;
 use Modules\Base\Models\Ums;
 //use Illuminate\Routing\Controller as ControllerBase; 
 use Modules\Base\Http\Controllers\ControllerBase;
-//use Modules\Base\Http\Requests\Common\Ums as Request;
+use Modules\Base\Http\Requests\Ums as Request;
 //use App\Rules\Um as RuleUm;
 class Unidades extends ControllerBase
 {
@@ -40,7 +40,7 @@ class Unidades extends ControllerBase
     public function create()
     {
          
-        return view('common.unidades.create');
+        return view('base::unidades.create');
    
     }
 

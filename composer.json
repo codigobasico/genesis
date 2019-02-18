@@ -43,19 +43,20 @@
         "phpunit/phpunit": "5.7.*"
     },
     "autoload": {
+        
+        "psr-4": {
+            "App\\": "app/",
+            "Modules\\": "modules/"
+        },
         "classmap": [
             "database",
             "app/Overrides",
              "modules/Base/Database/Seeders"   
-        ],
-        "psr-4": {
-            "App\\": "app/",
-            "Modules\\": "modules/"
-        }
-    },
+        ]
+                },
     "autoload-dev": {
         "classmap": [
-             "modules/Base/Database/Seeders"          
+                   "modules/Base/Database/Seeders"  
                 ],
         
         

@@ -55,6 +55,7 @@ return array(
     'Database\\Seeds\\Currencies' => $baseDir . '/database/seeds/Currencies.php',
     'Database\\Seeds\\InvoiceStatuses' => $baseDir . '/database/seeds/InvoiceStatuses.php',
     'Database\\Seeds\\Modules' => $baseDir . '/database/seeds/Modules.php',
+    'Database\\Seeds\\PichuzoSeeder' => $baseDir . '/database/seeds/PichuzoSeeder.php',
     'Database\\Seeds\\Roles' => $baseDir . '/database/seeds/Roles.php',
     'Database\\Seeds\\Settings' => $baseDir . '/database/seeds/Settings.php',
     'Database\\Seeds\\TestCompany' => $baseDir . '/database/seeds/TestCompany.php',

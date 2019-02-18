@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Geus\Models;
+namespace Modules\Base\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

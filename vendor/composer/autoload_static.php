@@ -662,6 +662,7 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         'Database\\Seeds\\Currencies' => __DIR__ . '/../..' . '/database/seeds/Currencies.php',
         'Database\\Seeds\\InvoiceStatuses' => __DIR__ . '/../..' . '/database/seeds/InvoiceStatuses.php',
         'Database\\Seeds\\Modules' => __DIR__ . '/../..' . '/database/seeds/Modules.php',
+        'Database\\Seeds\\PichuzoSeeder' => __DIR__ . '/../..' . '/database/seeds/PichuzoSeeder.php',
         'Database\\Seeds\\Roles' => __DIR__ . '/../..' . '/database/seeds/Roles.php',
         'Database\\Seeds\\Settings' => __DIR__ . '/../..' . '/database/seeds/Settings.php',
         'Database\\Seeds\\TestCompany' => __DIR__ . '/../..' . '/database/seeds/TestCompany.php',

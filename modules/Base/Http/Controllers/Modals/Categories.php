@@ -2,9 +2,9 @@
 
 namespace Modules\Base\Http\Controllers\Modals;
 use Modules\Base\Http\Controllers\ControllerBase as Controller;
-use Modules\Base\Http\Requests\Setting\Category as Request;
+use Modules\Base\Http\Requests\Category as Request;
 use Illuminate\Http\Request as CRequest;
-use App\Models\Setting\Category;
+use Modules\Base\Models\Category;
 
 class Categories extends Controller
 {
@@ -28,7 +28,7 @@ class Categories extends Controller
     public function create(CRequest $request)
     {
        
-        //dd('create');
+       // dd('create');
         $type = $request['type'];
 
         $category_selector = false;
@@ -59,9 +59,11 @@ class Categories extends Controller
     public function store(Request $request)
     {
         $request['enabled'] = 1;
-
-        $category = Category::create($request->all());
-
+     
+       // Log::error(serialize($request->all()));
+        //dd($request);
+       $category = Category::create($request->all());
+       
         $message = trans('messages.success.added', ['type' => trans_choice('general.categories', 1)]);
 
         return response()->json([

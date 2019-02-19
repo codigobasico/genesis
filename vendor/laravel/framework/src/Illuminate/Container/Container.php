@@ -719,9 +719,7 @@ class Container implements ArrayAccess, ContainerContract
      */
     public function build($concrete)
     {
-        
-
-// If the concrete type is actually a Closure, we will just execute it and
+        // If the concrete type is actually a Closure, we will just execute it and
         // hand back the results of the functions, which allows functions to be
         // used as resolvers for more fine-tuned resolution of these objects.
         if ($concrete instanceof Closure) {

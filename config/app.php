@@ -206,12 +206,6 @@ return [
         Nwidart\Modules\LaravelModulesServiceProvider::class,
         Sofa\Eloquence\ServiceProvider::class,
         Plank\Mediable\MediableServiceProvider::class,
-        
-        /*
-         * Modulos Servicxe providers 
-         */
-        
-         Modules\Base\Providers\MigrationsProvider::class,
 
     ],
 

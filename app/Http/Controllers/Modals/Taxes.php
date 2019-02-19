@@ -39,9 +39,7 @@ class Taxes extends Controller
             $tax_selector = request()->get('tax_selector');
         }
 
-        $rand = rand();
-
-        $html = view('modals.taxes.create', compact('types', 'tax_selector', 'rand'))->render();
+        $html = view('modals.taxes.create', compact('types', 'tax_selector'))->render();
 
         return response()->json([
             'success' => true,

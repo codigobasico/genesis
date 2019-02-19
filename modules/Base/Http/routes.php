@@ -20,7 +20,7 @@ Route::group(['middleware' => 'web', 'prefix' => 'base', 'namespace' => 'Modules
     Route::get('items/export', 'Items@export')->name('items.export');
       
     
-    Route::group(['as' => 'modals.', 'prefix' => 'modals'], function () {
+    Route::group(['as' => 'modals.',  'prefix' => 'modals'], function () {
                 Route::resource('categories', 'Modals\Categories');  
                 Route::resource('unidades', 'Modals\Unidades');
             });

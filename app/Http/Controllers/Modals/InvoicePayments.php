@@ -59,9 +59,7 @@ class InvoicePayments extends Controller
             $invoice->grand_total = round($invoice->total - $paid, $currency->precision) ;
         }
 
-        $rand = rand();
-
-        $html = view('modals.invoices.payment', compact('invoice', 'accounts', 'currencies', 'currency', 'payment_methods', 'rand'))->render();
+        $html = view('modals.invoices.payment', compact('invoice', 'accounts', 'currencies', 'currency', 'payment_methods'))->render();
 
         return response()->json([
             'success' => true,

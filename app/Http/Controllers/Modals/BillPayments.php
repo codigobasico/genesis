@@ -59,9 +59,7 @@ class BillPayments extends Controller
             $bill->grand_total = round($bill->total - $paid, $currency->precision) ;
         }
 
-        $rand = rand();
-
-        $html = view('modals.bills.payment', compact('bill', 'accounts', 'currencies', 'currency', 'payment_methods', 'rand'))->render();
+        $html = view('modals.bills.payment', compact('bill', 'accounts', 'currencies', 'currency', 'payment_methods'))->render();
 
         return response()->json([
             'success' => true,

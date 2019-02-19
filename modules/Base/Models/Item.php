@@ -5,6 +5,7 @@ use App\Traits\Currencies;
 use Bkwld\Cloner\Cloneable;
 use Sofa\Eloquence\Eloquence;
 use App\Traits\Media;
+use Modules\Base\Observers\Item as ObervadorItem;
 class Item extends ModelBase
 {
     use Cloneable, Currencies, Eloquence, Media;
@@ -23,7 +24,7 @@ class Item extends ModelBase
      *
      * @var array
      */
-    protected $fillable = ['codum','unidad','dimension','company_id', 'name', 'sku', 'description', 'sale_price', 'purchase_price', 'quantity', 'category_id', 'tax_id', 'enabled'];
+    protected $fillable = ['codigo','codum','unidad','dimension','company_id', 'name', 'sku', 'description', 'category_id', 'enabled'];
 
     /**
      * Sortable columns.
@@ -42,6 +43,15 @@ class Item extends ModelBase
         'sku'         => 5,
         'description' => 2,
     ];
+    
+    protected static function boot()
+    {
+
+      parent::boot();
+       static::observe(ObservadorItem::class );
+    }
+    
+    
 
     public function category()
     {

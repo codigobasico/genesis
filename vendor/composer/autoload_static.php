@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
+class ComposerStaticInitce4cddab3dd9296dcca5d667854f48a0
 {
     public static $files = array (
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
@@ -69,7 +69,6 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
             'Symfony\\Polyfill\\Php56\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
-            'Symfony\\Contracts\\' => 18,
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Translation\\' => 30,
@@ -157,7 +156,6 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
             'Dotenv\\' => 7,
             'Dompdf\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
-            'Doctrine\\Common\\Inflector\\' => 26,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
@@ -248,10 +246,6 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
-        ),
-        'Symfony\\Contracts\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/contracts',
         ),
         'Symfony\\Component\\Yaml\\' => 
         array (
@@ -457,10 +451,6 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
-        'Doctrine\\Common\\Inflector\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
-        ),
         'Doctrine\\Common\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
@@ -598,6 +588,10 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
             array (
                 0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
             ),
+            'Doctrine\\Common\\Inflector\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
+            ),
             'Doctrine\\Common\\Collections\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/collections/lib',
@@ -662,7 +656,6 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         'Database\\Seeds\\Currencies' => __DIR__ . '/../..' . '/database/seeds/Currencies.php',
         'Database\\Seeds\\InvoiceStatuses' => __DIR__ . '/../..' . '/database/seeds/InvoiceStatuses.php',
         'Database\\Seeds\\Modules' => __DIR__ . '/../..' . '/database/seeds/Modules.php',
-        'Database\\Seeds\\PichuzoSeeder' => __DIR__ . '/../..' . '/database/seeds/PichuzoSeeder.php',
         'Database\\Seeds\\Roles' => __DIR__ . '/../..' . '/database/seeds/Roles.php',
         'Database\\Seeds\\Settings' => __DIR__ . '/../..' . '/database/seeds/Settings.php',
         'Database\\Seeds\\TestCompany' => __DIR__ . '/../..' . '/database/seeds/TestCompany.php',
@@ -727,8 +720,6 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         'ModifyDeletedAtColumnMediaTable' => __DIR__ . '/../..' . '/database/migrations/2019_02_04_000000_modify_deleted_at_column_media_table.php',
         'ModifyEmailColumn' => __DIR__ . '/../..' . '/database/migrations/2018_06_23_000000_modify_email_column.php',
         'ModifyEnabledColumn' => __DIR__ . '/../..' . '/database/migrations/2018_06_30_000000_modify_enabled_column.php',
-        'Modules\\Base\\Database\\Seeders\\BaseDatabaseSeeder' => __DIR__ . '/../..' . '/modules/Base/Database/Seeders/BaseDatabaseSeeder.php',
-        'Modules\\Base\\Database\\Seeders\\PermissionsBasic' => __DIR__ . '/../..' . '/modules/Base/Database/Seeders/PermissionsBasic.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -1199,11 +1190,11 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitce4cddab3dd9296dcca5d667854f48a0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitce4cddab3dd9296dcca5d667854f48a0::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitce4cddab3dd9296dcca5d667854f48a0::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitce4cddab3dd9296dcca5d667854f48a0::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitce4cddab3dd9296dcca5d667854f48a0::$classMap;
 
         }, null, ClassLoader::class);
     }

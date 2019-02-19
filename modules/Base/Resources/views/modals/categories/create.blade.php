@@ -10,6 +10,7 @@
 
                 <div class="row">
                     {{ Form::textGroup('name', trans('general.name'), 'id-card-o') }}
+                    {{ Form::textGroup('prefijo', trans('general.name'), 'id-card-o') }}
 
                     @stack('color_input_start')
                     <div class="form-group col-md-6 required {{ $errors->has('color') ? 'has-error' : ''}}">
@@ -51,7 +52,7 @@
         $('.create-category-{{ $rand }}#modal-create-category .modal-header').before('<span id="span-loading" style="position: absolute; height: 100%; width: 100%; z-index: 99; background: #6da252; opacity: 0.4;"><i class="fa fa-spinner fa-spin" style="font-size: 10em !important;margin-left: 35%;margin-top: 8%;"></i></span>');
 
         $.ajax({
-            url: '{{ url("modals/categories") }}',
+            url: '{{ url("base/modals/categories") }}',
             type: 'POST',
             dataType: 'JSON',
             data: $(".create-category-{{ $rand }} #form-create-category").serialize(),
@@ -93,6 +94,12 @@
                     $(".create-category-{{ $rand }}#modal-create-category input[name='color']").parent().parent().addClass('has-error');
                     $(".create-category-{{ $rand }}#modal-create-category input[name='color']").parent().after('<p class="help-block">' + error.responseJSON.color + '</p>');
                 }
+                
+                if (error.responseJSON.prefijo) {
+                    $(".create-category-{{ $rand }}#modal-create-category input[name='prefijo']").parent().parent().addClass('has-error');
+                    $(".create-category-{{ $rand }}#modal-create-category input[name='prefijo']").parent().after('<p class="help-block">' + error.responseJSON.name + '</p>');
+                }
+                
             }
         });
     });

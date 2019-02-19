@@ -30,8 +30,9 @@ class CreateTableUms extends Migration
      */
     public function down()
     {
-       
+           //Schema::dropIfExists('items');
+        DB::table('items')->truncate();
            Schema::dropIfExists('ums');
-        
+           
     }
 }

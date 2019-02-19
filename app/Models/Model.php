@@ -45,9 +45,7 @@ class Model extends Eloquent
      */
     public function modelFilter()
     {
-      
-        
-// Check if is api or web
+        // Check if is api or web
         if (Request::is('api/*')) {
             $arr = array_reverse(explode('\\', explode('@', app()['api.router']->currentRouteAction())[0]));
             $folder = $arr[1];
@@ -55,13 +53,13 @@ class Model extends Eloquent
         } else {
             list($folder, $file) = explode('/', Route::current()->uri());
         }
-  
+
         if (empty($folder) || empty($file)) {
             return $this->provideFilter();
         }
 
         $class = '\App\Filters\\' . ucfirst($folder) . '\\' . ucfirst($file);
-      
+
         return $this->provideFilter($class);
     }
 

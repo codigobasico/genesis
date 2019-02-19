@@ -9,7 +9,6 @@ $api->version('v1', ['middleware' => ['api']], function($api) {
 
         // Items
         $api->resource('items', 'Common\Items');
-        
 
         // Incomes
         $api->resource('customers', 'Incomes\Customers');

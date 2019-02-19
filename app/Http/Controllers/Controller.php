@@ -48,7 +48,7 @@ class Controller extends BaseController
         if (in_array($controller, $skip)) {
             return;
         }
-        //dd($controller);
+
         // Add CRUD permission check
         $this->middleware('permission:create-' . $controller)->only(['create', 'store', 'duplicate', 'import']);
         $this->middleware('permission:read-' . $controller)->only(['index', 'show', 'edit', 'export']);

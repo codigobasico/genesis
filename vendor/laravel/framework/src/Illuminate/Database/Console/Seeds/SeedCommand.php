@@ -71,9 +71,8 @@ class SeedCommand extends Command
      */
     protected function getSeeder()
     {
-       
-        //dd($this->input->getOption('class'));
-        $class = $this->laravel->make($this->input->getOption('class'));         
+        $class = $this->laravel->make($this->input->getOption('class'));
+
         return $class->setContainer($this->laravel)->setCommand($this);
     }
 

@@ -19,10 +19,8 @@ class Header
      */
     public function compose(View $view)
     {
-        //var_dump(get_class(new Auth));die();
-        
         $user = Auth::user();
-            // dd($user);
+
         $bills = [];
         $invoices = [];
         $items = [];

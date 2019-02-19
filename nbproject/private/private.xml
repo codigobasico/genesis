@@ -3,27 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/mygeus/database/seeds/PichuzoSeeder.php</file>
-            <file>file:/C:/xampp/htdocs/mygeus/storage/framework/sessions/.gitignore</file>
-            <file>file:/C:/xampp/htdocs/mygeus/database/seeds/Currencies.php</file>
-            <file>file:/C:/xampp/htdocs/mygeus/storage/framework/.gitignore</file>
-            <file>file:/C:/xampp/htdocs/mygeus/storage/framework/testing/.gitignore</file>
-            <file>file:/C:/xampp/htdocs/mygeus/database/seeds/Roles.php</file>
-            <file>file:/C:/xampp/htdocs/mygeus/bootstrap/cache/.gitignore</file>
-            <file>file:/C:/xampp/htdocs/mygeus/storage/fonts/.gitignore</file>
-            <file>file:/C:/xampp/htdocs/mygeus/app/Http/ViewComposers/Header.php</file>
-            <file>file:/C:/xampp/htdocs/mygeus/app/Models/Model.php</file>
-            <file>file:/C:/xampp/htdocs/mygeus/app/Utilities/Installer.php</file>
-            <file>file:/C:/xampp/htdocs/mygeus/storage/logs/.gitignore</file>
-            <file>file:/C:/xampp/htdocs/mygeus/.gitignore</file>
-            <file>file:/C:/xampp/htdocs/mygeus/storage/framework/cache/.gitignore</file>
-            <file>file:/C:/xampp/htdocs/mygeus/app/Http/Controllers/Controller.php</file>
-            <file>file:/C:/xampp/htdocs/mygeus/config/app.php</file>
-            <file>file:/C:/xampp/htdocs/mygeus/routes/api.php</file>
-            <file>file:/C:/xampp/htdocs/mygeus/storage/framework/views/.gitignore</file>
             <file>file:/C:/xampp/htdocs/mygeus/composer.json</file>
-            <file>file:/C:/xampp/htdocs/mygeus/vendor/composer/autoload_classmap.php</file>
-            <file>file:/C:/xampp/htdocs/mygeus/database/.gitignore</file>
+            <file>file:/C:/xampp/htdocs/mygeus/routes/web.php</file>
         </group>
     </open-files>
 </project-private>

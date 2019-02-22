@@ -27,6 +27,9 @@ class Items extends Controller
     public function index()
     {
        
+        
+        
+        //holis
        
         
         $items = Item::with('category')->collect();

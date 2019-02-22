@@ -4,6 +4,8 @@ use Modules\Base\Http\Controllers\ControllerBase as Controller;
 use Modules\Base\Http\Requests\Item as Request;
 use Modules\Base\Http\Requests\TotalItem as TRequest;
 use Modules\Base\Models\Item;
+
+
 use Modules\Base\Models\Ums;
 use App\Models\Setting\Category;
 /*use App\Models\Setting\Currency;*/
@@ -11,6 +13,7 @@ use App\Models\Setting\Category;
 use App\Traits\Uploads;
 use App\Utilities\Import;
 use App\Utilities\ImportFile;
+/*hola mundo*/
 
 class Items extends Controller
 {
@@ -29,7 +32,7 @@ class Items extends Controller
         $items = Item::with('category')->collect();
                    $unidades = Ums::collect();
         $categories = Category::enabled()->orderBy('name')->type('item')->pluck('name', 'id');
-
+//holasw
         return view('base::items.index', compact('items','unidades', 'categories'));
     }
 

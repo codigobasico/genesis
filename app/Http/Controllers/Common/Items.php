@@ -249,6 +249,8 @@ class Items extends Controller
 
     public function autocomplete()
     {
+         
+        
         $type = request('type');
         $query = request('query');
         $currency_code = request('currency_code');
@@ -261,13 +263,13 @@ class Items extends Controller
 
         $autocomplete = Item::autocomplete([
             'name' => $query,
-            'sku' => $query,
+            'marca' => $query,
         ]);
 
         if ($type == 'invoice') {
-            $autocomplete->quantity();
+            //$autocomplete->quantity();
         }
-
+                   
         $items = $autocomplete->get();
 
         if ($items) {

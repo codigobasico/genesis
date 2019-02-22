@@ -19,7 +19,9 @@ class Item
   //invocando al evento  creating : beforesave() en Yii
 public function creating(Model $model)
     {
-        $prefijo= \Modules\Base\Models\Category::find($model->category_id)->prefijo;
+        
+   
+    $prefijo= \Modules\Base\Models\Category::find($model->category_id)->prefijo;
         $model->codigo=$model->correlativo($campo='codigo',
                 null,
                 $prefijo
@@ -39,14 +41,14 @@ public function creating(Model $model)
     public function created(Model $model)
     {
        
-        
+       
        
     }
     
     
     public function updated(Model $model)
     {
-        
+        //dd('ahi queda UPDATED');
        
     }
 

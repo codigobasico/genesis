@@ -6,6 +6,8 @@ use Route;
 use Modules\Base\Observers\ModelBase as ObservadorBase; 
 use App\Models\Model;
 use Modules\Base\Scopes\CompanyNewScope;
+
+
 class ModelBase extends Model
 {
     public $logable=true; //Si es auditable;
@@ -18,6 +20,8 @@ class ModelBase extends Model
      */
     protected static function boot()
     {
+        
+        
         
         
         //no activar porque si no se activa el scope global Company

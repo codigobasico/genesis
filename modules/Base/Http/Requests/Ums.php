@@ -3,9 +3,11 @@
 namespace Modules\Base\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Modules\Base\Models\Item;
 class Ums extends FormRequest
 {
+   
+    public $methods=['POST','PATCH'];
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -23,10 +25,20 @@ class Ums extends FormRequest
      */
     public function rules()
     {
-        return [
-            'codum' => 'required|string',
-            'unidad' => 'required|string',
-            'dimension' => 'required|string',
+        if (in_array($this->getMethod(), $this->methods)) {
+            /*$codum = $this->customer->getAttribute('codum');
+            if(is_null(Item::find()));*/
+            //dd(old('codum'));
+            
+            
+        } 
+        
+        $reglas= [
+           // 'codum' =>  'required|unique:ums|max:5|string',
+            'unidad' => 'min:4|required|string',
+            'dimension' => 'max:1|min:1|required|string|alpha',
             ];
+        
+       return $reglas;
     }
 }

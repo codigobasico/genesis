@@ -8,22 +8,18 @@
     {!! Form::open(['route' => 'items.store', 'files' => true, 'role' => 'form', 'class' => 'form-loading-button']) !!}
 
     <div class="box-body">
-        {{ Form::textGroup('codigo', trans('general.code'),'cube',['disabled'=>'disabled']) }}
-         {{ Form::textGroup('sku', trans('items.sku'), 'key',[]) }}
-        {{ Form::textGroup('name', trans('general.name'), 'id-card-o',[]) }}
+        {{ Form::textGroup('codigo', trans_choice('base::general.code',1),'meetup',['placeholder'=>trans('base::general.automatic')]) }}
+          {{ Form::textGroup('name', trans('general.name'), 'id-card-o',[]) }}
+                 {{ Form::textGroup('nparte', trans('base::general.item.part_number'), 'cubes',[]) }}
+         {{ Form::textGroup('marca', trans('base::general.item.manufacturer'), 'cogs',[]) }}
+        {{ Form::textGroup('modelo', trans('base::general.item.model'), 'cubes',[]) }}
+                {{ Form::textareaGroup('description', trans('general.description')) }}
+          {{ Form::radioGroup('esrotativo', trans('base::general.item.is_rotative')) }}
+
         
-         {{ Form::textGroup('nparte', trans('items.nparte'), 'cubes',[]) }}
-        
-        {{ Form::textareaGroup('description', trans('general.description')) }}
-          {{ Form::radioGroup('esrotativo', trans('items.rotative')) }}
-
-        {{ Form::textGroup('sale_price', trans('items.sales_price'), 'money') }}
-
-        {{ Form::textGroup('purchase_price', trans('items.purchase_price'), 'money') }}
-
         @stack('units_id_input_start')
         <div class="form-group col-md-6 required {{ $errors->has('codum') ? 'has-error' : ''}}">
-            {!! Form::label('codum', trans_choice('general.units', 1), ['class' => 'control-label']) !!}
+            {!! Form::label('codum', trans_choice('base::general.ums.Unit_Measurement', 1), ['class' => 'control-label']) !!}
             <div class="input-group">
                 <div class="input-group-addon"><i class="fa fa-folder-open-o"></i></div>
                 {!! Form::select('codum', $unidades, null, array_merge(['class' => 'form-control', 'placeholder' => trans('general.form.select.field', ['field' => trans_choice('general.units', 1)])])) !!}
@@ -34,11 +30,6 @@
             {!! $errors->first('codum', '<p class="help-block">:message</p>') !!}
         </div>
         @stack('units_id_input_end')
-        
-        
-        
-        {{ Form::textGroup('quantity', trans_choice('items.quantities', 1), 'cubes', ['required' => 'required'], '1') }}
-
        
         @stack('category_id_input_start')
         <div class="form-group col-md-6 required {{ $errors->has('category_id') ? 'has-error' : ''}}">
@@ -147,7 +138,7 @@
         $('#modal-create-category').remove();
 
         $.ajax({
-            url: '{{ url("base/modals/categories/create") }}',
+            url: '{{ url("base/modals/conversiones/create") }}',
             type: 'GET',
             dataType: 'JSON',
             data: {type: 'item'},

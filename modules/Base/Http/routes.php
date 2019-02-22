@@ -23,6 +23,8 @@ Route::group(['middleware' => 'web', 'prefix' => 'base', 'namespace' => 'Modules
     Route::group(['as' => 'modals.',  'prefix' => 'modals'], function () {
                 Route::resource('categories', 'Modals\Categories');  
                 Route::resource('unidades', 'Modals\Unidades');
+                 Route::resource('conversiones', 'Modals\Conversiones');  
+               // Route::resource('unidades', 'Modals\Unidades');
             });
     
     

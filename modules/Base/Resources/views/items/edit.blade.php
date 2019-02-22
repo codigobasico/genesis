@@ -14,21 +14,24 @@
     ]) !!}
 
     <div class="box-body">
-        {{ Form::textGroup('name', trans('general.name'), 'id-card-o') }}
-
-        {{ Form::textGroup('sku', trans('items.sku'), 'key') }}
-
-        {{ Form::textareaGroup('description', trans('general.description')) }}
-
-        {{ Form::textGroup('sale_price', trans('items.sales_price'), 'money') }}
-
-        {{ Form::textGroup('purchase_price', trans('items.purchase_price'), 'money') }}
-
-        {{ Form::textGroup('quantity', trans_choice('items.quantities', 1), 'cubes') }}
-
-        {{ Form::selectGroup('tax_id', trans_choice('general.taxes', 1), 'percent', $taxes, null, []) }}
-
-        {{ Form::selectGroup('category_id', trans_choice('general.categories', 1), 'folder-open-o', $categories, null, []) }}
+         {{ Form::textGroup('codigo', trans_choice('base::general.code',1),'meetup',['disabled'=>'disabled','placeholder'=>trans('base::general.automatic')]) }}
+          {{ Form::textGroup('name', trans('general.name'), 'id-card-o',[]) }}
+                 {{ Form::textGroup('nparte', trans('base::general.item.part_number'), 'cubes',[]) }}
+         {{ Form::textGroup('marca', trans('base::general.item.manufacturer'), 'cogs',[]) }}
+        {{ Form::textGroup('modelo', trans('base::general.item.model'), 'cubes',[]) }}
+                {{ Form::textareaGroup('description', trans('general.description')) }}
+          {{ Form::radioGroup('esrotativo', trans('base::general.item.is_rotative')) }}
+            
+          
+      <div class="input-group">
+           {{ Form::selectGroup('codum', trans_choice('base::general.ums.Unit_Measurement',1), 'folder-open-o', $unidades, null, []) }}
+           <div class="input-group-btn">
+                    <button type="button" id="button-conversions" class="btn btn-default btn-icon"><i class="fa fa-plus"></i></button>
+           </div>
+            
+       </div>
+                 
+       {{ Form::selectGroup('category_id', trans_choice('general.categories', 1), 'folder-open-o', $categories, null, []) }}
 
         {{ Form::fileGroup('picture', trans_choice('general.pictures', 1)) }}
 
@@ -60,32 +63,7 @@
         var text_no = '{{ trans('general.no') }}';
 
         $(document).ready(function(){
-            /*$("#sale_price").maskMoney({
-                thousands : '{{ $currency->thousands_separator }}',
-                decimal : '{{ $currency->decimal_mark }}',
-                precision : {{ $currency->precision }},
-                allowZero : true,
-                @if($currency->symbol_first)
-                prefix : '{{ $currency->symbol }}'
-                @else
-                suffix : '{{ $currency->symbol }}'
-                @endif
-            });
-
-            $("#purchase_price").maskMoney({
-                thousands : '{{ $currency->thousands_separator }}',
-                decimal : '{{ $currency->decimal_mark }}',
-                precision : {{ $currency->precision }},
-                allowZero : true,
-                @if($currency->symbol_first)
-                prefix : '{{ $currency->symbol }}'
-                @else
-                suffix : '{{ $currency->symbol }}'
-                @endif
-            });
-
-            $("#sale_price").focusout();
-            $("#purchase_price").focusout();*/
+            
 
             $('#tax_id').select2({
                 placeholder: {
@@ -173,5 +151,21 @@
                 }
             });
         });
+        
+         $(document).on('click', '#button-conversions', function (e) {
+        $('#modal-create-conversions').remove();
+
+        $.ajax({
+            url: '{{ url("base/modals/conversiones/create") }}',
+            type: 'GET',
+            dataType: 'JSON',
+            data: {codigo: $('#codigo').val(),codumbase: $('#codum').val() },
+            success: function(json) {
+                if (json['success']) {
+                    $('body').append(json['html']);
+                }
+            }
+        });
+    });
     </script>
 @endpush

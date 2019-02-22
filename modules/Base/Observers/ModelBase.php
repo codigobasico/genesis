@@ -108,18 +108,20 @@ public function creating(Model $model)
     }
     
     private static  function getCommonsFields(Model $model){
+        $consola=app()->runningInConsole();
+       
        
         return [
            'creationdate'=>date('Y-m-d H:i:s'),
-            'username'=>Auth::user()->name,  
-            'userid'=>Auth::user()->id,  
+            'username'=>(!$consola && Auth::check())?Auth::user()->name:'Console',  
+            'userid'=>(!$consola  && Auth::check())?Auth::user()->id:0,  
             'modelo'=>get_class($model),
              'metodo'=> request()->method(),
               'clave'=> $model->getKey(),
                //'idmodelo'=> $model->getKey(),
                 'campoclave'=> $model->getKeyName(),
                 'noperacion'=> round(microtime(true) * 1000).'',
-            'controlador'=>request()->route()->getAction()['controller'],
+            'controlador'=>(!$consola)?request()->route()->getAction()['controller']:'seeding',
              'operacion'=>'',
               
         ];

@@ -18,6 +18,7 @@ class Company implements Scope
      */
     public function apply(Builder $builder, Model $model)
     {
+        
         $table = $model->getTable();
 
         // Skip for specific tables

@@ -1,6 +1,23 @@
 <?php
 
 return [
+    'code'=>'Código|Códigos',
+    'automatic'=>'Automático',
+    
+    'item'=>[
+        'part_number'=>'Número de parte',
+        'manufacturer'=>'Fabricante',
+        'model'=>'Modelo',
+        'model'=>'Modelo',
+        'net weight'=>'Peso neto',
+        'is_rotative'=>'Rotativo',
+            ],
+    'ums'=>[
+        'Unit_Measurement'=>'Unidad de medida|Unidades de medida'
+        
+    ],
+    
+    
     'units'                 => 'Unidad|Unidades',
     
     'title' => [

@@ -19,14 +19,17 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
+        '4a1f389d6ce373bda9e57857d3b61c84' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/helpers.php',
+        'e94defb743a4d9da5bb973e78c1fa8ff' => __DIR__ . '/..' . '/imanghafoori/laravel-terminator/src/helpers.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '95779e373bd3ef5069868a995b5280ab' => __DIR__ . '/..' . '/imanghafoori/laravel-heyman/src/helpers.php',
+        '1374595b22715c0d85ab645d8272fe85' => __DIR__ . '/..' . '/imanghafoori/laravel-widgetize/src/helpers.php',
         'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '2da31aab4d964479c4430d9212a1ed38' => __DIR__ . '/..' . '/akaunting/language/src/helpers.php',
         'edce8962b03f4b83e36b18e5e0097f24' => __DIR__ . '/..' . '/akaunting/money/src/helpers.php',
         'a7af7b67318e84e7f5f763df69bfbafa' => __DIR__ . '/..' . '/akaunting/setting/src/helpers.php',
         'ffa2e1a16242200828a0ea01c7cdd729' => __DIR__ . '/..' . '/akaunting/version/src/helpers.php',
-        '4a1f389d6ce373bda9e57857d3b61c84' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/helpers.php',
         'f4e9c7747917193061b46ee142399603' => __DIR__ . '/..' . '/dingo/api/src/helpers.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'e23faeee409e941dc9b4c80386209c39' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/functions.php',
@@ -43,6 +46,10 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         array (
             'jlawrence\\eos\\' => 14,
         ),
+        'c' => 
+        array (
+            'crocodicstudio\\crudbooster\\' => 27,
+        ),
         'X' => 
         array (
             'XdgBaseDir\\' => 11,
@@ -53,6 +60,7 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         ),
         'U' => 
         array (
+            'Unisharp\\Laravelfilemanager\\' => 28,
             'Unicodeveloper\\Identify\\' => 24,
         ),
         'T' => 
@@ -69,6 +77,7 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
             'Symfony\\Polyfill\\Php56\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Contracts\\' => 18,
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Translation\\' => 30,
@@ -133,6 +142,9 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         'I' => 
         array (
             'Intervention\\Image\\' => 19,
+            'Imanghafoori\\Widgets\\' => 21,
+            'Imanghafoori\\HeyMan\\' => 20,
+            'ImanGhafoori\\Terminator\\' => 24,
             'Illuminate\\' => 11,
         ),
         'G' => 
@@ -156,6 +168,7 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
             'Dotenv\\' => 7,
             'Dompdf\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
+            'Doctrine\\Common\\Inflector\\' => 26,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
@@ -199,6 +212,10 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         array (
             0 => __DIR__ . '/..' . '/jlawrence/eos/src',
         ),
+        'crocodicstudio\\crudbooster\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/crocodicstudio/crudbooster/src',
+        ),
         'XdgBaseDir\\' => 
         array (
             0 => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src',
@@ -206,6 +223,10 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Unisharp\\Laravelfilemanager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/unisharp/laravel-filemanager/src',
         ),
         'Unicodeveloper\\Identify\\' => 
         array (
@@ -246,6 +267,10 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Symfony\\Contracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/contracts',
         ),
         'Symfony\\Component\\Yaml\\' => 
         array (
@@ -406,6 +431,19 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         'Intervention\\Image\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
+            1 => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image',
+        ),
+        'Imanghafoori\\Widgets\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/imanghafoori/laravel-widgetize/src',
+        ),
+        'Imanghafoori\\HeyMan\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/imanghafoori/laravel-heyman/src',
+        ),
+        'ImanGhafoori\\Terminator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/imanghafoori/laravel-terminator/src',
         ),
         'Illuminate\\' => 
         array (
@@ -450,6 +488,10 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
+        ),
+        'Doctrine\\Common\\Inflector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (
@@ -588,10 +630,6 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
             array (
                 0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
             ),
-            'Doctrine\\Common\\Inflector\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
-            ),
             'Doctrine\\Common\\Collections\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/collections/lib',
@@ -656,6 +694,7 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         'Database\\Seeds\\Currencies' => __DIR__ . '/../..' . '/database/seeds/Currencies.php',
         'Database\\Seeds\\InvoiceStatuses' => __DIR__ . '/../..' . '/database/seeds/InvoiceStatuses.php',
         'Database\\Seeds\\Modules' => __DIR__ . '/../..' . '/database/seeds/Modules.php',
+        'Database\\Seeds\\PichuzoSeeder' => __DIR__ . '/../..' . '/database/seeds/PichuzoSeeder.php',
         'Database\\Seeds\\Roles' => __DIR__ . '/../..' . '/database/seeds/Roles.php',
         'Database\\Seeds\\Settings' => __DIR__ . '/../..' . '/database/seeds/Settings.php',
         'Database\\Seeds\\TestCompany' => __DIR__ . '/../..' . '/database/seeds/TestCompany.php',
@@ -720,6 +759,11 @@ class ComposerStaticInit7c416f1dc220c71d2e1c79d502b2a7d5
         'ModifyDeletedAtColumnMediaTable' => __DIR__ . '/../..' . '/database/migrations/2019_02_04_000000_modify_deleted_at_column_media_table.php',
         'ModifyEmailColumn' => __DIR__ . '/../..' . '/database/migrations/2018_06_23_000000_modify_email_column.php',
         'ModifyEnabledColumn' => __DIR__ . '/../..' . '/database/migrations/2018_06_30_000000_modify_enabled_column.php',
+        'Modules\\Base\\Database\\Seeders\\BaseDatabaseSeeder' => __DIR__ . '/../..' . '/modules/Base/Database/Seeders/BaseDatabaseSeeder.php',
+        'Modules\\Base\\Database\\Seeders\\MasterBasic' => __DIR__ . '/../..' . '/modules/Base/Database/Seeders/MasterBasic.php',
+        'Modules\\Base\\Database\\Seeders\\PermissionsBasic' => __DIR__ . '/../..' . '/modules/Base/Database/Seeders/PermissionsBasic.php',
+        'Modules\\Base\\Providers\\BaseServiceProvider' => __DIR__ . '/../..' . '/modules/Base/Providers/BaseServiceProvider.php',
+        'Modules\\Base\\Providers\\MigrationsProvider' => __DIR__ . '/../..' . '/modules/Base/Providers/MigrationsProvider.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',

@@ -17,5 +17,6 @@ class BaseDatabaseSeeder extends Seeder
         Model::unguard();
 
        $this->call(PermissionsBasic::class);
+       $this->call(MasterBasic::class);
     }
 }

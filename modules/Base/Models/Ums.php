@@ -13,10 +13,10 @@ class Ums extends ModelBase
    public $timestamps = false;
    protected $dates = ['deleted_at'];
    
-    protected static function boot()
+   /* protected static function boot()
     {
          parent::boot();
-    }
+    }*/
    //override porque estos valores no dependen de lninguna compania
   public function scopeCompanyId($query, $company_id)
     {

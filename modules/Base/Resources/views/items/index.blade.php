@@ -36,10 +36,10 @@
                     <tr>
                         <th class="col-md-1 hidden-xs">{{ trans_choice('general.pictures', 1) }}</th>
                         <th class="col-md-3">@sortablelink('name', trans('general.name'))</th>
+                        <th class="col-md-1">@sortablelink('marca', trans('base::general.item.manufacturer'))</th>
+                        <th class="col-md-1">@sortablelink('modelo', trans('base::general.item.model'))</th>
+                        
                         <th class="col-md-1 hidden-xs">@sortablelink('category', trans_choice('general.categories', 1))</th>
-                        <th class="col-md-1 hidden-xs">@sortablelink('quantity', trans_choice('items.quantities', 1))</th>
-                        <th class="col-md-2 text-right amount-space">@sortablelink('sale_price', trans('items.sales_price'))</th>
-                        <th class="col-md-2 hidden-xs text-right amount-space">@sortablelink('purchase_price', trans('items.purchase_price'))</th>
                         <th class="col-md-1 hidden-xs">@sortablelink('enabled', trans_choice('general.statuses', 1))</th>
                         <th class="col-md-1 text-center">{{ trans('general.actions') }}</th>
                     </tr>
@@ -49,10 +49,9 @@
                     <tr>
                         <td class="hidden-xs"><img src="{{ $item->picture ? Storage::url($item->picture->id) : asset('public/img/akaunting-logo-green.png') }}" class="img-thumbnail" width="50" alt="{{ $item->name }}"></td>
                         <td><a href="{{ route('items.edit', $item->id) }}">{{ $item->name }}</a></td>
+                        <td>{{ $item->marca }} </td>
+                        <td>{{ $item->modelo }} </td>
                         <td class="hidden-xs">{{ $item->category ? $item->category->name : trans('general.na') }}</td>
-                        <td class="hidden-xs">{{ $item->quantity }}</td>
-                        <td class="text-right amount-space">{{ money($item->sale_price, setting('general.default_currency'), true) }}</td>
-                        <td class="hidden-xs text-right amount-space">{{ money($item->purchase_price, setting('general.default_currency'), true) }}</td>
                         <td class="hidden-xs">
                             @if ($item->enabled)
                                 <span class="label label-success">{{ trans('general.enabled') }}</span>

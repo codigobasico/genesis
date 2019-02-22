@@ -27,10 +27,10 @@ class Items extends Controller
        
         
         $items = Item::with('category')->collect();
-
+                   $unidades = Ums::collect();
         $categories = Category::enabled()->orderBy('name')->type('item')->pluck('name', 'id');
 
-        return view('base::items.index', compact('items', 'categories'));
+        return view('base::items.index', compact('items','unidades', 'categories'));
     }
 
     /**
@@ -69,6 +69,8 @@ class Items extends Controller
      */
     public function store(Request $request)
     {
+       
+        
         $item = Item::create($request->input());
 
         // Upload picture
@@ -132,13 +134,15 @@ class Items extends Controller
      */
     public function edit(Item $item)
     {
+       
+          $unidades=Ums::query()->orderBy('unidad')->pluck('unidad', 'codum');
         $categories = Category::enabled()->orderBy('name')->type('item')->pluck('name', 'id');
 
-        $taxes = Tax::enabled()->orderBy('name')->get()->pluck('title', 'id');
+       // $taxes = Tax::enabled()->orderBy('name')->get()->pluck('title', 'id');
 
-        $currency = Currency::where('code', '=', setting('general.default_currency', 'USD'))->first();
+        //$currency = Currency::where('code', '=', setting('general.default_currency', 'USD'))->first();
 
-        return view('common.items.edit', compact('item', 'categories', 'taxes', 'currency'));
+        return view('base::items.edit', compact('unidades','item', 'categories'));
     }
 
     /**

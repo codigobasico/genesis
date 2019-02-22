@@ -13,13 +13,15 @@ class CompanyNewScope extends Company
     
     public function apply(Builder $builder, Model $model)
     {
+       
+        
         $table = $model->getTable();
 
         /*
          * AQUI LA DIFERENCIA
          * 
          */
-        $skip_tables = ['ums','companies', 'jobs', 'migrations', 'notifications', 'permissions', 'role_user', 'roles', 'sessions', 'users'];
+        $skip_tables = [ 'conversiones', 'ums','companies', 'jobs', 'migrations', 'notifications', 'permissions', 'role_user', 'roles', 'sessions', 'users'];
         /*
          * FIN DE LA DIFERENCIA
          * 

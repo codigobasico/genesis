@@ -107,6 +107,7 @@ class Item extends Model
      */
     public function scopeAutocomplete($query, $filter)
     {
+       //var_dump($filter);die();
         return $query->where(function ($query) use ($filter) {
             foreach ($filter as $key => $value) {
                 $query->orWhere($key, 'LIKE', "%" . $value  . "%");

@@ -18,7 +18,7 @@ class Items extends ModelFilter
     {
         $model = $this->where('name', 'LIKE', '%' . $query . '%');
 
-        $or_fields = ['sku', 'description'];
+        $or_fields = ['marca', 'description'];
         foreach ($or_fields as $or_field) {
             $model->orWhere($or_field, 'LIKE', '%' . $query . '%');
         }
